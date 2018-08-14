@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+nasm -f elf64 -o $1.o $1
+gcc $1.o -o $1.elf -nostartfiles -nostdinc -nostdlib

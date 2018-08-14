@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+nasm -f bin -o $1.bin $1
+cat $1.bin | python3 -c 'import sys; print(sys.stdin.buffer.read())'
