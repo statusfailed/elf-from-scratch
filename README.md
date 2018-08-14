@@ -9,10 +9,10 @@ table entry, and no sections.
 [main.py](main.py) currently hardcodes the program to write- it's "hello world".
 See [asm/hello.asm](asm/hello.asm) for a program listing.
 
-`go.sh` will run the main script, call `readelf -a` on the output, and run the
+[go.sh](go.sh) will run the main script, call `readelf -a` on the output, and run the
 ELF64 file.
 
-Here's what `readelf` has to say about it:
+Here's what `readelf` has to say about the produced ELF:
 
 		ELF Header:
 			Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00
@@ -54,6 +54,17 @@ Here's what `readelf` has to say about it:
 		Dynamic symbol information is not available for displaying symbols.
 
 		No version information found in this file.
+
+# TODO
+
+* Why does my program header table entry have to have an offset of 0? I get segfaults otherwise :(
+
+# references
+
+Links I found useful while making this:
+
+- [ELF-64 Object File Format](https://www.uclibc.org/docs/elf-64-gen.pdf)
+- [Linux X86_64 syscalls table](http://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/)
 
 # useful commands
 
