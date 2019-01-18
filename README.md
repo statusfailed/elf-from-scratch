@@ -58,6 +58,9 @@ Here's what `readelf` has to say about the produced ELF:
 # TODO
 
 * Why does my program header table entry have to have an offset of 0? I get segfaults otherwise :(
+  - Might be due to [this][1] - seems like `p_offset` must be page aligned?
+
+[1]: https://stackoverflow.com/questions/5104060/elf-program-header-offset
 
 # references
 
